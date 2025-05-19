@@ -1,6 +1,6 @@
 import React,{act, useState} from 'react'
 import Countdown from './Countdown'
-import { FaBox, FaRegEdit, FaShareAlt, FaShower, FaTshirt } from "react-icons/fa";
+import { FaBox, FaPlaneDeparture, FaRegEdit, FaShareAlt, FaShower, FaTshirt } from "react-icons/fa";
 import { FaList, FaRegClipboard } from "react-icons/fa6";
 import { MdDelete, MdLaptop, MdOutlineWbSunny } from "react-icons/md";
 import { IoMdCloudOutline, IoMdDocument } from "react-icons/io";
@@ -505,7 +505,10 @@ const removeNoteFromDay = (dayLabel, noteIndex) => {
 
         {/* navbar  */}
         <nav className="relative z-10 py-4 px-12 flex flex-row items-center justify-between">
-            <h1 className='relative logo text-white font-bold text-3xl'>Trip<span className='font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500'>Ready</span></h1>
+          <div className='relative flex flex-row gap-4 items-center'>
+            <FaPlaneDeparture size={32} className='text-pink-500'/>
+            <h1 className='relative logo text-white font-bold text-3xl flex flex-row'>Trip<span className='font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500'>Ready</span></h1>
+          </div>
             <div className='relative flex flex-row gap-4'>
                 <div className='relative flex flex-col gap-1 cursor-pointer' onClick={()=> {setCurrentTab('Dashboard')}}>
                     <div className={ `${currentTab==='Dashboard' ? 'text-white' : 'text-gray-500'} transition-all duration-300`}>Dashboard</div>
