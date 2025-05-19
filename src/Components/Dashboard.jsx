@@ -511,15 +511,15 @@ const removeNoteFromDay = (dayLabel, noteIndex) => {
           </div>
             <div className='relative flex flex-row gap-4'>
                 <div className='relative flex flex-col gap-1 cursor-pointer' onClick={()=> {setCurrentTab('Dashboard')}}>
-                    <div className={ `${currentTab==='Dashboard' ? 'text-white' : 'text-gray-500'} transition-all duration-300`}>Dashboard</div>
+                    <div className={ `${currentTab==='Dashboard' ? 'text-white' : 'text-gray-500'} transition-all link duration-300`}>Dashboard</div>
                     <div className={` ${currentTab==='Dashboard' ? 'bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 h-[2px] w-full rounded-full transition-all duration-300' : 'w-0'}`} ></div>
                 </div>
                 <div className='relative flex flex-col gap-1 cursor-pointer' onClick={()=> {setCurrentTab('Itinerary')}}>
-                    <div className={ `${currentTab==='Itinerary' ? 'text-white' : 'text-gray-500'} transition-all duration-300`}>Itinerary</div>
+                    <div className={ `${currentTab==='Itinerary' ? 'text-white' : 'text-gray-500'} transition-all link duration-300`}>Itinerary</div>
                     <div className={` ${currentTab==='Itinerary' ? 'bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 h-[2px] w-full rounded-full transition-all duration-300' : 'w-0'}`} ></div>
                 </div>
                 <div className='relative flex flex-col gap-1 cursor-pointer' onClick={()=> {setCurrentTab('Packing List')}}>
-                    <div className={ `${currentTab==='Packing List' ? 'text-white' : 'text-gray-500'} transition-all duration-300`}>Packing List</div>
+                    <div className={ `${currentTab==='Packing List' ? 'text-white' : 'text-gray-500'} transition-all link duration-300`}>Packing List</div>
                     <div className={` ${currentTab==='Packing List' ? 'bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 h-[2px] w-full rounded-full transition-all duration-300' : 'w-0'}`} ></div>
                 </div>
             </div>
@@ -742,7 +742,7 @@ const removeNoteFromDay = (dayLabel, noteIndex) => {
                       </div>
                       <div className='relative flex flex-row gap-3 items-center'>
                         <div className='relative h-6 w-6 rounded-full bg-[#374151] text-gray-400 flex items-center justify-center text-xs'>{item.quantity}</div>
-                        <div className='relative rounded-md w-fit bg-orange-500 bg-opacity-20 text-orange-500 text-xs font-semibold p-1 px-2 flex items-center justify-center'>{item.priority}</div>
+                        <div className={`relative rounded-md w-fit text-xs font-semibold p-1 px-2 flex items-center justify-center ${item.priority === 'High' ? 'bg-red-500 bg-opacity-20 text-red-500' : item.priority === 'Medium' ? 'bg-yellow-500 bg-opacity-20 text-yellow-500' : 'bg-green-500 bg-opacity-20 text-green-500'}`}>{item.priority}</div>
                         <MdDelete className='text-gray-500' size={20}/>
                       </div>
                     </div>
