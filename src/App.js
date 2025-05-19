@@ -11,7 +11,7 @@ function App() {
       {/* Gradient Blobs */}
         <div className="absolute rounded-full float filter blur-3xl opacity-60" style={{background: "rgba(19, 70, 151, 0.85)",width: "300px",height: "300px",top: "5%",left: "2%",mixBlendMode: "screen",}}></div>
         <div className="absolute rounded-full float-reverse filter blur-3xl opacity-60" style={{ background: "rgba(19, 151, 30, 0.85)", width: "300px", height: "300px",top: "60%",right: "5%",mixBlendMode: "screen",}}></div>
-        <div className="absolute rounded-full filter blur-3xl pulse-slow opacity-60" style={{ background: "rgba(151, 19, 133, 0.73)", width: "200px", height: "200px",top: "50%",left: "45%",mixBlendMode: "screen",}}></div>
+        <div className="absolute rounded-full filter blur-3xl float opacity-60" style={{ background: "rgba(151, 19, 133, 0.73)", width: "200px", height: "200px",top: "50%",left: "45%",mixBlendMode: "screen",}}></div>
       <Dashboard />
       
     </div>
